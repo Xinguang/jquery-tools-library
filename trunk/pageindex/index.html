@@ -1,0 +1,16 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.pageindex.js"></script>
+<script type="text/javascript">
+var itemcount = 10000;
+var pagesize = 10;
+var page_now = 5;
+jQuery( document ).ready( function(){
+  jQuery("#pageindex").pageindex({
+      count:itemcount,
+      pagesize:pagesize,
+      page:page_now
+  });
+});
+</script>
+
+<div id="pageindex"></div>
