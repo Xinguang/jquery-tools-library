@@ -20,8 +20,8 @@
 			} else {
 				pURL = window.location.href;
 			}
-			if (pURL.indexOf(key) != -1) {
-				var reg = new RegExp("([\?\&])(" + key + "=)([^\&]*)(\&?)", "i");
+			var reg = new RegExp("([\?\&])(" + key + "=)([^\&]*)(\&?)", "i");
+			if (reg.test(pURL)) {
 				return pURL.replace(reg, "$1$2" + value + "$4");
 			} else {
 				return pURL + (pURL.indexOf("?") == -1 ? "?" : "&") + key + "="
